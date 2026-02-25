@@ -21,14 +21,11 @@ class ProfileCard extends StatefulWidget {
 class _ProfileCardState extends State<ProfileCard> {
   int likeCount = 0;
 
-  // Increment likes
   void incrementLikes() {
     setState(() {
       likeCount++;
     });
   }
-
-  // Dynamic background color based on likes
   Color getCardColor() {
     if (likeCount >= 15) {
       return Colors.pink[100]!;
@@ -39,7 +36,6 @@ class _ProfileCardState extends State<ProfileCard> {
     }
   }
 
-  // Dynamic message based on likes
   String getMessage() {
     if (likeCount >= 15)
       return 'Superstar!';
@@ -64,12 +60,11 @@ class _ProfileCardState extends State<ProfileCard> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Profile Avatar
               CircleAvatar(
                 radius: 60,
                 backgroundColor: Colors.teal,
                 child: Text(
-                  'FM', // Your initials
+                  'FM', 
                   style: TextStyle(
                     fontSize: 40,
                     color: Colors.white,
@@ -78,25 +73,23 @@ class _ProfileCardState extends State<ProfileCard> {
                 ),
               ),
               SizedBox(height: 20),
-              // Name
+              
               Text(
-                'Fidelite Munezero', // Your name
+                'Fidelite Fabiola Munezero', 
                 style: TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               SizedBox(height: 10),
-              // Bio
               Text(
-                'Flutter Developer in Training', // Your bio
+                'Flutter Developer in Training', 
                 style: TextStyle(
                   fontSize: 16,
                   color: Colors.grey[600],
                 ),
               ),
               SizedBox(height: 15),
-              // Dynamic message
               Text(
                 getMessage(),
                 style: TextStyle(
@@ -106,7 +99,6 @@ class _ProfileCardState extends State<ProfileCard> {
                 ),
               ),
               SizedBox(height: 30),
-              // Like counter row
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -120,7 +112,6 @@ class _ProfileCardState extends State<ProfileCard> {
                 ],
               ),
               SizedBox(height: 20),
-              // Like button
               ElevatedButton.icon(
                 onPressed: incrementLikes,
                 icon: Icon(Icons.thumb_up),

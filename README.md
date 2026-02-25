@@ -1,6 +1,6 @@
-# main
+# first-flutter-project
 
-A new Flutter project.
+This repository is about my first flutter project - a profile card app.
 
 ## Getting Started
 

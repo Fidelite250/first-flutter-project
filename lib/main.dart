@@ -83,7 +83,7 @@ class _ProfileCardState extends State<ProfileCard> {
               ),
               SizedBox(height: 10),
               Text(
-                'Flutter Developer in Training', 
+                'Software Developer', 
                 style: TextStyle(
                   fontSize: 16,
                   color: Colors.grey[600],
